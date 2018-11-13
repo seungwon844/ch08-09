@@ -6,8 +6,8 @@
 
 {% load staticfiles %}  <!--정적 파일인 css 연결하기 위하여, staticfiles를 로드-->
 <!--스타일시트 css/base.css 작성이 필요함-->
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
-<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
 
 </head>
@@ -16,7 +16,7 @@
 
 <div id="header">                   <!--헤더 영역-->
     <h2 class="maintitle">쉽고 빠른 장고 웹 프로그래밍</h2>
-    <h4 class="welcome">반갑습니다. <a href="#">l황승원</a>님.  /
+    <h4 class="welcome">반갑습니다. <a href="#">logistex</a>님.  /
                 <a href="#">비밀번호 변경</a> /
                 <a href="#">로그아웃</a>
     </h4>
