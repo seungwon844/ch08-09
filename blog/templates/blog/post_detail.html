@@ -73,9 +73,12 @@
                   <!--http://localhost:8000/blog/tag/-->
                   <!--embed 태그를 활용해서 src에 지정된 템플릿을 해당 영역에 출력-->
                   <embed type="text/html" src="{% url 'blog:tag_cloud' %}">
-              </td>
-          </tr>
-        </table>
-        <br/>
-    </div>
+          </td>
+      </tr>
+    </table>
+    <br/>                           <!-- ch08 1/5  -->
+    <div>                           <!-- ch08 2/5  -->
+        {% load disqus_tags %}      <!-- ch08 3/5  -->
+        {% disqus_show_comments %}  <!-- ch08 4/5  -->
+    </div>                          <!-- ch08 5/5  -->
 {% endblock %}}

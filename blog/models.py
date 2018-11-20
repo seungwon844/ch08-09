@@ -35,7 +35,7 @@ class Post(models.Model):
         verbose_name = '기사'              # 'post'
         verbose_name_plural = '기사 모음'  # 'posts'
         db_table  = 'my_posts'           # DB에 저장할 테이블 이름을 my_posts'라고 지정
-                                         # 기본값(앱이름_모델클래스이름)은 'blog_post'
+
         ordering  = ('-modify_date',)  # 최종 수정 일시의 내림차순 정렬
 
     def __str__(self):
@@ -46,7 +46,9 @@ class Post(models.Model):
         # # Example: /post/django-example/
         # url(r'^post/(?P<slug>[-\w]+)/$', PostDV.as_view(), name='post_detail'),
         return reverse('blog:post_detail', args=(self.slug,))
-    def get_previous_post(self):  # 3.2.5 항에서 템플릿 작성할 때 사용
+
+
+    def get_previous_post(self):
         return self.get_previous_by_modify_date()
 
     def get_next_post(self):  # 3.2.5 항에서 템플릿 작성할 때 사용
